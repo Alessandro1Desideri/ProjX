@@ -10,7 +10,7 @@ const Login = () => {
     const [success, setSucces] = useState(false);
 
     useEffect(() => {
-        userRef.current.focus();
+        useRef.current.focus();
     }, [])
 
     useEffect(() => {
@@ -18,9 +18,13 @@ const Login = () => {
     }, [user,pwd])
 
     return (
-        <div>
-
-        </div>
+        <section>
+            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"}
+            aria-live="assertive">{errMsg}
+            </p>
+            <h1><p>Log In</p>now and start customizing your activities on our platform</h1>
+            <form action=""></form>
+        </section>
     )
 }
 
