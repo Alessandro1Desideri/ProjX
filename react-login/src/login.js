@@ -34,6 +34,15 @@ const Login = () => {
                     value={user}
                     required
                 />
+
+                <label hmtlFor="password">Password:</label>
+                <input 
+                    type="password" 
+                    id="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={pwd}
+                    required
+                />
             </form>
         </section>
     )
