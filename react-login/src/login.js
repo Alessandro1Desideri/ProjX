@@ -28,7 +28,7 @@ const Login = () => {
                 <input 
                     type="text" 
                     id="username"
-                    ref={userRef}
+                    ref={useRef}
                     autoComplete="off"
                     onChange={(e) => setUser(e.target.value)}
                     value={user}
@@ -39,11 +39,18 @@ const Login = () => {
                 <input 
                     type="password" 
                     id="password"
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPwd(e.target.value)}
                     value={pwd}
                     required
                 />
+                <button>Log In</button>
             </form>
+            <p>
+                Don't have an account? 
+                <span className="line">
+                    <a href="#">Sign Up</a>
+                </span>
+            </p>
         </section>
     )
 }
